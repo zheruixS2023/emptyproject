@@ -34,6 +34,7 @@ pipeline {
         stage('Post-Build Actions') {
             steps {
                 // Add any post-build actions like notifications
+                echo 'Post-Build Actions'
                 // emailNotification('your-email@example.com')
             }
         }
