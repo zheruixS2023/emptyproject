@@ -1,10 +1,5 @@
 pipeline {
     agent any
-    environment {
-        // Define environment variables
-        SONARQUBE_URL = credentials('sonarqube-url')
-        SONARQUBE_TOKEN = credentials('sonarqube-token')
-    }
     stages {
         stage('Build') {
             steps {
