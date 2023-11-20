@@ -13,6 +13,13 @@ pipeline {
                 script {
                     // Using environment variables for SonarQube
                     echo 'Test..'
+                    SonarQube
+                    sh "sonar-scanner \
+                        -Dsonar.projectKey=14848project \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=http://localhost:9000 \
+                        -Dsonar.token=7e98743f690e43fe94862887293858ab"
+
                 }
             }
         }
