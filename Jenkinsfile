@@ -6,12 +6,6 @@ pipeline {
         SONARQUBE_TOKEN = credentials('sonarqube-token')
     }
     stages {
-        stage('Checkout') {
-            steps {
-                // Add a checkout step for your code repository
-                checkout scm
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Building..'
